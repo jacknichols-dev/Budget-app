@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+Paaji+2:400,600,800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Baloo Paaji 2", cursive, sans-serif;
+  color: #530089; }
+
+.budget-container {
+  width: 100%;
+  min-height: 100%; }
+
+.header-img {
+  background-image: url(../img/header.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 10vh; }
+
+.header {
+  background: linear-gradient(to bottom right, #530089, #29003a);
+  color: white;
+  padding: 0 2.5rem;
+  height: 30vh; }
+  .header__balance {
+    font-weight: 800;
+    padding: 2rem 0 0 0;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem; }
+    .header__balance--value {
+      font-size: 4rem;
+      font-weight: 300; }
+  .header__account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem 5rem 2rem;
+    font-size: 1.6rem; }
+    .header__account--income {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .header__account--outcome {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .header__account--outcome-total {
+      color: #ff6700; }
+
+.budget-dashboard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border-top-left-radius: 2.7rem;
+  border-top-right-radius: 2.7rem;
+  transform: translateY(-2.5rem);
+  height: 63vh;
+  box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.1); }
+  .budget-dashboard__title {
+    font-weight: 800;
+    font-size: 2.4rem;
+    padding: 2rem 0 1rem 2.5rem; }
+  .budget-dashboard__toggle {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    font-weight: 300;
+    padding-left: 2.5rem; }
+    .budget-dashboard__toggle--tab1 {
+      opacity: 0.4; }
+    .budget-dashboard__toggle--tab2 {
+      opacity: 0.4; }
+    .budget-dashboard__toggle--tab3 {
+      opacity: 0.4; }
+
+.active {
+  opacity: 1;
+  font-weight: 800; }
+
+.income-list {
+  min-height: 42rem; }
+
+.income__input {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  box-shadow: 0 -0.3rem 1.2rem rgba(0, 0, 0, 0.15); }
+  .income__input > * {
+    height: 4.5rem;
+    color: #530089; }
+    .income__input > *:nth-child(1), .income__input > *:nth-child(2) {
+      margin-left: 0.3rem;
+      font-size: 1.6rem;
+      width: 45%;
+      padding: 0.5rem;
+      border: none;
+      font-weight: 600;
+      outline: none; }
+      .income__input > *:nth-child(1):nth-child(1), .income__input > *:nth-child(2):nth-child(1) {
+        padding-left: 2.5rem; }
+      .income__input > *:nth-child(1)::placeholder, .income__input > *:nth-child(2)::placeholder {
+        color: #ff6700;
+        font-weight: 500;
+        letter-spacing: 0.07rem;
+        opacity: 0.8; }
+  .income__input--add-btn-img {
+    margin-right: 2.5rem; }
+
+.expense__input {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  box-shadow: 0 -0.3rem 1.2rem rgba(0, 0, 0, 0.15); }
+  .expense__input > * {
+    height: 4.5rem;
+    color: #530089; }
+    .expense__input > *:nth-child(1), .expense__input > *:nth-child(2) {
+      margin-left: 0.3rem;
+      font-size: 1.6rem;
+      width: 45%;
+      padding: 0.5rem;
+      border: none;
+      font-weight: 600;
+      outline: none; }
+      .expense__input > *:nth-child(1):nth-child(1), .expense__input > *:nth-child(2):nth-child(1) {
+        padding-left: 2.5rem; }
+      .expense__input > *:nth-child(1)::placeholder, .expense__input > *:nth-child(2)::placeholder {
+        color: #ff6700;
+        font-weight: 500;
+        letter-spacing: 0.07rem;
+        opacity: 0.8; }
+  .expense__input--add-btn-img {
+    margin-right: 2.5rem; }

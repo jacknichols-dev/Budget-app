@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+Paaji+2:400,600,800&display=swap");
+
+$pri: #530089;
+$pri1: #29003a;
+$sec: #ff6700;
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Baloo Paaji 2", cursive, sans-serif;
+  color: $pri;
+}
