@@ -1,6 +1,7 @@
 .budget-container {
   position: relative;
   background: linear-gradient(to bottom right, $pri, $pri1);
+  min-height: 100vh;
 
   @include respond(phone-large) {
     box-shadow: $shade;
@@ -16,7 +17,6 @@
   @include respond(phone-large) {
     padding-left: 4rem;
   }
-
 
   &__balance {
     font-weight: 800;
@@ -39,9 +39,8 @@
     font-size: 1.6rem;
 
     @include respond(phone-large) {
-      padding:  0 4rem 1rem 4rem;
+      padding: 0 4rem 1rem 4rem;
     }
-
 
     &--income {
       display: flex;
@@ -77,7 +76,6 @@
     @include respond(phone-large) {
       padding-left: 4rem;
     }
-
   }
 
   &__toggle {
@@ -121,7 +119,6 @@
 
 //INPUT & ADD BTN
 
-
 .income__input {
   background-color: white;
   bottom: 0;
@@ -136,7 +133,6 @@
   user-select: auto;
   box-shadow: $shade-up;
   height: 8rem;
-
 
   @include respond(phone-large) {
     position: absolute;
@@ -173,11 +169,11 @@
       }
     }
   }
-  &--add-btn-img {
+  &--add-btn {
     margin-right: 2.5rem;
+    cursor: pointer;
   }
 }
-
 
 .expense__input {
   background-color: white;
@@ -225,11 +221,52 @@
         color: $sec;
         font-weight: 500;
         letter-spacing: 0.07rem;
-        opacity: 0.8;
+        opacity: 0.6;
       }
     }
   }
-  &--add-btn-img {
+  &--add-btn {
     margin-right: 2.5rem;
+    cursor: pointer;
   }
+}
+
+.entry {
+  padding: 1rem 2.5rem;
+  color: $sec;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  flex: 1;
+}
+
+.expense {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.income {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#edit {
+  width: 3rem;
+  height: 3rem;
+  background-image: url(../img/edit.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#delete {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-image: url(../img/bin.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 1.5rem;
+  cursor: pointer;
 }

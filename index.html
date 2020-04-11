@@ -1,81 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App - Vanilla JS</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Paaji+2:400,600,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Budget App - Vanilla JS</title>
-  <link rel="stylesheet" href="css/style.css" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji+2:400,600,800&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <div class="budget-container">
+      <img class="top-img" src="img/header.svg" alt="" />
+      <header class="header">
+        <div class="header__balance">
+          <div class="header__balance--title">
+            Balance
+          </div>
+          <div class="header__balance--value">
+            <small>£</small><strong> 0</strong>
+          </div>
+        </div>
+        <div class="header__account">
+          <div class="header__account--income">
+            <div class="header__account--income-title">
+              Income
+            </div>
+            <div class="header__account--income-total">
+              <small>£</small><strong>0</strong>
+            </div>
+          </div>
+          <div class="chart"></div>
+          <div class="header__account--outcome">
+            <div class="header__account--outcome-title">
+              Outcome
+            </div>
+            <div class="header__account--outcome-total"><small>£</small>0</div>
+          </div>
+        </div>
+      </header>
 
-<body>
-  <div class="budget-container">
-    <img class="top-img" src="img/header.svg" alt="">
-    <header class="header">
-      <div class="header__balance">
-        <div class="header__balance--title">
-          Balance
-        </div>
-        <div class="header__balance--value">
-          <small>£</small><strong> 0</strong>
-        </div>
-      </div>
-      <div class="header__account">
-        <div class="header__account--income">
-          <div class="header__account--income-title">
-            Income
-          </div>
-          <div class="header__account--income-total">
-            <small>£</small><strong>0</strong>
+      <div class="budget-dashboard">
+        <div class="budget-dashboard__title">Dashboard</div>
+        <div class="budget-dashboard__toggle">
+          <div class="budget-dashboard__toggle--tab1">Expenses</div>
+          <div class="budget-dashboard__toggle--tab2">Income</div>
+          <div class="budget-dashboard__toggle--tab3 active">
+            All
           </div>
         </div>
-        <div class="chart"></div>
-        <div class="header__account--outcome">
-          <div class="header__account--outcome-title">
-            Outcome
-          </div>
-          <div class="header__account--outcome-total"><small>£</small>0</div>
-        </div>
-      </div>
-    </header>
-
-    <div class="budget-dashboard">
-      <div class="budget-dashboard__title">Dashboard</div>
-      <div class="budget-dashboard__toggle">
-        <div class="budget-dashboard__toggle--tab1">Expenses</div>
-        <div class="budget-dashboard__toggle--tab2">Income</div>
-        <div class="budget-dashboard__toggle--tab3 active">
-          All
-        </div>
-      </div>
-      <div class="hide" id="income">
-        <ul class="list"></ul>
-        <div class="income__input">
-          <input type="text" id="income-title-input" name="title" placeholder="Title" />
-          <input type="number" id="income-amount-input" name="amount" placeholder="$0" />
-          <div class="income__input--add-btn">
-            <img class="income__input--add-btn-img" src="img/add.png" width="45px" height="45px" />
+        <div class="hide" id="income">
+          <ul class="list"></ul>
+          <div class="income__input">
+            <input
+              type="text"
+              id="income-title-input"
+              name="title"
+              placeholder="Title"
+            />
+            <input
+              type="number"
+              id="income-amount-input"
+              name="amount"
+              placeholder="$0"
+            />
+            <div class="income__input--add-btn">
+              <img src="img/add.png" width="45px" height="45px" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="hide" id="expense">
-        <ul class="list"></ul>
-        <div class="expense__input">
-          <input type="text" id="expense-title-input" name="title" placeholder="Title" />
-          <input type="number" id="expense-amount-input" name="amount" placeholder="$0" />
-          <div class="expense__add-btn">
-            <img class="income__input--add-btn-img" src="img/add.png" width="45px" height="45px" />
+        <div class="hide" id="expense">
+          <ul class="list"></ul>
+          <div class="expense__input">
+            <input
+              type="text"
+              id="expense-title-input"
+              name="title"
+              placeholder="Title"
+            />
+            <input
+              type="number"
+              id="expense-amount-input"
+              name="amount"
+              placeholder="$0"
+            />
+            <div class="expense__input--add-btn">
+              <img src="img/add.png" width="45px" height="45px" />
+            </div>
           </div>
         </div>
-      </div>
-      <div id="all">
-        <ul class="list"></ul>
+        <div id="all">
+          <ul class="list"></ul>
+        </div>
       </div>
     </div>
-  </div>
-  <script src="js/budget.js"></script>
-  <script src="js/chart.js"></script>
-</body>
-
+    <script src="JS/budget.js"></script>
+    <script src="JS/chart.js"></script>
+  </body>
 </html>
