@@ -11,34 +11,42 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (min-width: 46.25em) {
+    html {
+      font-size: 70%; } }
 
 body {
   font-size: 1.6rem;
   font-weight: 400;
   font-family: "Baloo Paaji 2", cursive, sans-serif;
   color: #530089; }
+  @media only screen and (min-width: 46.25em) {
+    body {
+      margin: 0 30%;
+      background: #ff6700; } }
 
 .budget-container {
-  width: 100%;
-  min-height: 100%; }
+  position: relative;
+  background: linear-gradient(to bottom right, #530089, #29003a); }
+  @media only screen and (min-width: 46.25em) {
+    .budget-container {
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); } }
 
-.header-img {
-  background-image: url(../img/header.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 10vh; }
+.top-img {
+  margin-bottom: -1rem; }
 
 .header {
-  background: linear-gradient(to bottom right, #530089, #29003a);
   color: white;
-  padding: 0 2.5rem;
-  height: 30vh; }
+  padding: 0 2.5rem; }
+  @media only screen and (min-width: 46.25em) {
+    .header {
+      padding-left: 4rem; } }
   .header__balance {
     font-weight: 800;
-    padding: 2rem 0 0 0;
+    padding: 2rem 0;
     font-size: 1.8rem;
-    letter-spacing: 0.1rem; }
+    letter-spacing: 0.1rem;
+    line-height: 1.3; }
     .header__balance--value {
       font-size: 4rem;
       font-weight: 300; }
@@ -46,8 +54,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem 5rem 2rem;
+    padding: 0 2rem 2rem 2rem;
     font-size: 1.6rem; }
+    @media only screen and (min-width: 46.25em) {
+      .header__account {
+        padding: 0 4rem 1rem 4rem; } }
     .header__account--income {
       display: flex;
       flex-direction: column;
@@ -61,26 +72,28 @@ body {
 
 .budget-dashboard {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-color: white;
   border-top-left-radius: 2.7rem;
   border-top-right-radius: 2.7rem;
-  transform: translateY(-2.5rem);
-  height: 63vh;
-  box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.4);
+  height: 58vh; }
   .budget-dashboard__title {
     font-weight: 800;
     font-size: 2.4rem;
     padding: 2rem 0 1rem 2.5rem; }
+    @media only screen and (min-width: 46.25em) {
+      .budget-dashboard__title {
+        padding-left: 4rem; } }
   .budget-dashboard__toggle {
-    flex: 1;
     display: flex;
     justify-content: space-between;
     width: 65%;
     font-weight: 300;
-    padding-left: 2.5rem; }
+    padding-left: 2.5rem;
+    cursor: pointer; }
+    @media only screen and (min-width: 46.25em) {
+      .budget-dashboard__toggle {
+        padding-left: 4rem; } }
     .budget-dashboard__toggle--tab1 {
       opacity: 0.4; }
     .budget-dashboard__toggle--tab2 {
@@ -92,34 +105,45 @@ body {
   opacity: 1;
   font-weight: 800; }
 
+.hide {
+  display: none; }
+
 .income-list {
   min-height: 42rem; }
 
 .income__input {
-  position: fixed;
+  background-color: white;
   bottom: 0;
+  position: fixed;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 6rem;
   -webkit-user-select: auto;
   -moz-user-select: auto;
   -ms-user-select: auto;
   user-select: auto;
-  box-shadow: 0 -0.3rem 1.2rem rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.4);
+  height: 8rem; }
+  @media only screen and (min-width: 46.25em) {
+    .income__input {
+      position: absolute;
+      width: 100%; } }
   .income__input > * {
     height: 4.5rem;
     color: #530089; }
     .income__input > *:nth-child(1), .income__input > *:nth-child(2) {
       margin-left: 0.3rem;
       font-size: 1.6rem;
-      width: 45%;
       padding: 0.5rem;
       border: none;
       font-weight: 600;
       outline: none; }
       .income__input > *:nth-child(1):nth-child(1), .income__input > *:nth-child(2):nth-child(1) {
-        padding-left: 2.5rem; }
+        padding-left: 2.5rem;
+        width: 70%; }
+      .income__input > *:nth-child(1):nth-child(2), .income__input > *:nth-child(2):nth-child(2) {
+        width: 30%; }
       .income__input > *:nth-child(1)::placeholder, .income__input > *:nth-child(2)::placeholder {
         color: #ff6700;
         font-weight: 500;
@@ -129,30 +153,38 @@ body {
     margin-right: 2.5rem; }
 
 .expense__input {
-  position: fixed;
+  background-color: white;
   bottom: 0;
+  position: fixed;
   display: flex;
+  width: 100vw;
   align-items: center;
   justify-content: space-between;
-  height: 6rem;
   -webkit-user-select: auto;
   -moz-user-select: auto;
   -ms-user-select: auto;
   user-select: auto;
-  box-shadow: 0 -0.3rem 1.2rem rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.4);
+  height: 8rem; }
+  @media only screen and (min-width: 46.25em) {
+    .expense__input {
+      position: absolute;
+      width: 100%; } }
   .expense__input > * {
     height: 4.5rem;
     color: #530089; }
     .expense__input > *:nth-child(1), .expense__input > *:nth-child(2) {
       margin-left: 0.3rem;
       font-size: 1.6rem;
-      width: 45%;
       padding: 0.5rem;
       border: none;
       font-weight: 600;
       outline: none; }
       .expense__input > *:nth-child(1):nth-child(1), .expense__input > *:nth-child(2):nth-child(1) {
-        padding-left: 2.5rem; }
+        padding-left: 2.5rem;
+        width: 70%; }
+      .expense__input > *:nth-child(1):nth-child(2), .expense__input > *:nth-child(2):nth-child(2) {
+        width: 30%; }
       .expense__input > *:nth-child(1)::placeholder, .expense__input > *:nth-child(2)::placeholder {
         color: #ff6700;
         font-weight: 500;

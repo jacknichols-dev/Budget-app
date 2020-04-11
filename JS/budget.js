@@ -25,12 +25,62 @@ const addIncome = document.querySelector(".income__input--add-btn-img");
 const addExpense = document.querySelector(".expense__input--add-btn-img");
 const expenseAmount = document.getElementById("expense-amount-input");
 const incomeAmount = document.getElementById("income-amount-input");
-const incomeTitle = document.getElementById("expense-title-input");
+const expenseTitle = document.getElementById("expense-title-input");
 const incomeTitle = document.getElementById("income-title-input");
 
 // CHART
 const chartEl = document.querySelector(".chart");
 
-/*------------------ EVENT LISTENERS -----------------*/
+/*------------------ VARIABLES -----------------*/
+let ENTRY_LIST = [];
+let balance = 0, income = 0, outcome = 0;
 
-/*------------------ FUNCTIONS -----------------*/
+const DELETE = 'delete', EDIT = 'edit';
+
+/*------------------ EVENT LISTENERS -----------------*/
+expenseBtn.addEventListener('click', function () {
+  show(expenseEl);
+  hide([incomeEl, allEl]);
+  active(expenseBtn);
+  inactive([incomeBtn, allBtn]);
+
+});
+
+incomeBtn.addEventListener('click', function () {
+  show(incomeEl)
+  hide([expenseEl, allEl]);
+  active(incomeBtn);
+  inactive([expenseBtn, allBtn]);
+
+});
+
+allBtn.addEventListener('click', function () {
+  show(allEl)
+  hide([expenseEl, incomeEl]);
+  active(allBtn);
+  inactive([incomeBtn, expenseBtn]);
+
+});
+
+/*------------------ FUNCTIONS / HELPERS -----------------*/
+
+//TOGGLES
+function show(element) {
+  element.classList.remove('hide');
+}
+
+function hide(elements) {
+  elements.forEach(element => {
+    element.classList.add('hide');
+  })
+}
+
+function active(element) {
+  element.classList.add('active')
+}
+
+function inactive(elements) {
+  elements.forEach(element => {
+    element.classList.remove('active');
+  })
+}

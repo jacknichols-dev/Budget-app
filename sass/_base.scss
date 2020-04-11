@@ -4,6 +4,17 @@ $pri: #530089;
 $pri1: #29003a;
 $sec: #ff6700;
 
+$shade: 0 1rem 3rem rgba(0,0,0, .3);
+$shade-up: 0 -1rem 2rem rgba(0,0,0, .4);
+
+// mixins
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone-large {
+    @media only screen and  (min-width: 46.25em) { @content };   // 740px
+}
+}
+
 *,
 *::before,
 *::after {
@@ -18,6 +29,10 @@ $sec: #ff6700;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @include respond(phone-large) {
+   font-size: 70%;
+  }
 }
 
 body {
@@ -25,4 +40,10 @@ body {
   font-weight: 400;
   font-family: "Baloo Paaji 2", cursive, sans-serif;
   color: $pri;
+
+
+  @include respond(phone-large) {
+    margin: 0 30%;
+    background: $sec;
+  }
 }
