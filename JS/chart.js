@@ -14,11 +14,14 @@ chartEl.appendChild(canvas);
 // TO DRAW ON CANVAS, WE NEED TO GET CONTEXT OF CANVAS
 const context = canvas.getContext("2d");
 
+//CHANGE THE LINE WIDTH
+context.lineWidth = 8;
+
 // CIRCLE RADIUS
 const R = 20;
 
 //FUNCTIONS
-function drawCircle() {
+function drawCircle(color, ratio, anticlockwise) {
   context.strokeStyle = color;
   context.beginPath();
   context.arc(
@@ -30,4 +33,12 @@ function drawCircle() {
     anticlockwise
   );
   context.stroke();
+}
+
+function updateChart(income, outcome) {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  let ratio = income / (income + outcome);
+
+  drawCircle("white", -ratio, true);
+  drawCircle("orangeRed", 1 - ratio, false);
 }
