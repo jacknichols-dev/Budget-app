@@ -81,7 +81,7 @@ body {
   border-top-left-radius: 2.7rem;
   border-top-right-radius: 2.7rem;
   box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.25);
-  height: 59vh; }
+  height: 50vh; }
   @media only screen and (min-width: 46.25em) {
     .budget-dashboard {
       min-height: 50rem; } }

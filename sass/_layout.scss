@@ -69,7 +69,7 @@
   border-top-left-radius: 2.7rem;
   border-top-right-radius: 2.7rem;
   box-shadow: $shade-up-heavy;
-  height: 59vh;
+  height: 50vh;
 
   @include respond(phone-large) {
     min-height: 50rem;
