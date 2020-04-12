@@ -1,7 +1,7 @@
 .budget-container {
   position: relative;
   background: linear-gradient(to bottom right, $pri, $pri1);
-  min-height: 100vh;
+  max-height: 100vh;
 
   @include respond(phone-large) {
     box-shadow: $shade;
@@ -244,7 +244,6 @@
 
 .entry {
   padding: 0.5rem 2.5rem;
-  color: $sec;
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: 0.05rem;
@@ -255,6 +254,14 @@
   }
 }
 
+.budget-dashboard #all ul.list li #edit {
+  visibility: hidden;
+}
+
+.budget-dashboard ul.list li.expense {
+  color: $sec;
+}
+
 .expense {
   display: flex;
   align-items: center;
@@ -262,6 +269,12 @@
 }
 
 .income {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.all {
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -28,9 +28,6 @@ const incomeAmount = document.getElementById("income-amount-input");
 const expenseTitle = document.getElementById("expense-title-input");
 const incomeTitle = document.getElementById("income-title-input");
 
-// CHART
-const chartEl = document.querySelector(".chart");
-
 /*------------------ VARIABLES -----------------*/
 let ENTRY_LIST = [];
 let balance = 0,
@@ -68,7 +65,7 @@ addExpense.addEventListener("click", function () {
   let expense = {
     type: "expense",
     title: expenseTitle.value,
-    amount: expenseAmount.value,
+    amount: parseFloat(expenseAmount.value),
   };
   ENTRY_LIST.push(expense);
 
@@ -82,7 +79,7 @@ addIncome.addEventListener("click", function () {
   let income = {
     type: "income",
     title: incomeTitle.value,
-    amount: incomeAmount.value,
+    amount: parseFloat(incomeAmount.value),
   };
   ENTRY_LIST.push(income);
 
@@ -123,20 +120,26 @@ function clearInput(inputs) {
 //UPDATE UI
 function updateUI() {
   income = calculateTotal("income", ENTRY_LIST);
-  outcome = calculateTotal("outcome", ENTRY_LIST);
-  balance = calculateBalance(income, outcome);
-
-  clearElement([expenseList, incomeList, allList]);
+  outcome = calculateTotal("expense", ENTRY_LIST);
+  balance = Math.abs(calculateBalance(income, outcome));
 
   //DETERMINE SIGN OF BALANCE
   let sign = income >= outcome ? "£" : "-£";
+
+  //UPDATE UI
+  balanceEl.innerHTML = `<small>${sign}</small>${balance}`;
+  outcomeTotalEl.innerHTML = `<small>£</small>${outcome}`;
+  incomeTotalEl.innerHTML = `<small>£</small>${income}`;
+
+  clearElement([expenseList, incomeList, allList]);
 
   ENTRY_LIST.forEach((entry, index) => {
     if (entry.type == "expense") {
       showEntry(expenseList, entry.type, entry.title, entry.amount, index);
     } else if (entry.type == "income") {
       showEntry(incomeList, entry.type, entry.title, entry.amount, index);
-    } else showEntry(allList, entry.type, entry.title, entry.amount, index);
+    }
+    showEntry(allList, entry.type, entry.title, entry.amount, index);
   });
 }
 

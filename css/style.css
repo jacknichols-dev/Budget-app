@@ -30,7 +30,7 @@ body {
 .budget-container {
   position: relative;
   background: linear-gradient(to bottom right, #530089, #29003a);
-  min-height: 100vh; }
+  max-height: 100vh; }
   @media only screen and (min-width: 46.25em) {
     .budget-container {
       box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); } }
@@ -210,7 +210,6 @@ body {
 
 .entry {
   padding: 0.5rem 2.5rem;
-  color: #ff6700;
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: 0.05rem;
@@ -219,12 +218,23 @@ body {
     .entry {
       padding: 1rem 4rem; } }
 
+.budget-dashboard #all ul.list li #edit {
+  visibility: hidden; }
+
+.budget-dashboard ul.list li.expense {
+  color: #ff6700; }
+
 .expense {
   display: flex;
   align-items: center;
   justify-content: space-between; }
 
 .income {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.all {
   display: flex;
   align-items: center;
   justify-content: space-between; }
