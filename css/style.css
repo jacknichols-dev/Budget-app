@@ -20,7 +20,8 @@ body {
   font-weight: 400;
   font-family: "Baloo Paaji 2", cursive, sans-serif;
   color: #530089;
-  background-color: pri1; }
+  background-color: pri1;
+  line-height: 1.2; }
   @media only screen and (min-width: 46.25em) {
     body {
       margin: auto 25%;
@@ -47,8 +48,7 @@ body {
     font-weight: 800;
     padding: 2rem 0;
     font-size: 1.8rem;
-    letter-spacing: 0.1rem;
-    line-height: 1.3; }
+    letter-spacing: 0.1rem; }
     .header__balance--value {
       font-size: 4rem;
       font-weight: 300; }
@@ -77,8 +77,11 @@ body {
   background-color: white;
   border-top-left-radius: 2.7rem;
   border-top-right-radius: 2.7rem;
-  box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.4);
-  height: 58vh; }
+  box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.25);
+  height: 70vh; }
+  @media only screen and (min-width: 46.25em) {
+    .budget-dashboard {
+      min-height: 80rem; } }
   .budget-dashboard__title {
     font-weight: 800;
     font-size: 2.4rem;
@@ -91,7 +94,7 @@ body {
     justify-content: space-between;
     width: 65%;
     font-weight: 300;
-    padding-left: 2.5rem;
+    padding: 0 0 1.2rem 2.5rem;
     cursor: pointer; }
     @media only screen and (min-width: 46.25em) {
       .budget-dashboard__toggle {
@@ -125,7 +128,7 @@ body {
   -moz-user-select: auto;
   -ms-user-select: auto;
   user-select: auto;
-  box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 -0.7rem 0.7rem rgba(0, 0, 0, 0.15);
   height: 8rem; }
   @media only screen and (min-width: 46.25em) {
     .income__input {
@@ -150,10 +153,14 @@ body {
         color: #ff6700;
         font-weight: 500;
         letter-spacing: 0.07rem;
-        opacity: 0.8; }
+        opacity: 0.6; }
   .income__input--add-btn {
     margin-right: 2.5rem;
-    cursor: pointer; }
+    cursor: pointer;
+    align-self: stretch;
+    height: 100%;
+    display: flex;
+    align-items: center; }
 
 .expense__input {
   background-color: white;
@@ -167,7 +174,7 @@ body {
   -moz-user-select: auto;
   -ms-user-select: auto;
   user-select: auto;
-  box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 -0.7rem 0.7rem rgba(0, 0, 0, 0.15);
   height: 8rem; }
   @media only screen and (min-width: 46.25em) {
     .expense__input {
@@ -195,15 +202,22 @@ body {
         opacity: 0.6; }
   .expense__input--add-btn {
     margin-right: 2.5rem;
-    cursor: pointer; }
+    cursor: pointer;
+    align-self: stretch;
+    height: 100%;
+    display: flex;
+    align-items: center; }
 
 .entry {
-  padding: 1rem 2.5rem;
+  padding: 0.5rem 2.5rem;
   color: #ff6700;
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: 0.05rem;
   flex: 1; }
+  @media only screen and (min-width: 46.25em) {
+    .entry {
+      padding: 1rem 4rem; } }
 
 .expense {
   display: flex;
@@ -218,7 +232,7 @@ body {
 #edit {
   width: 3rem;
   height: 3rem;
-  background-image: url(../img/edit.png);
+  background-image: url(../img/edit.svg);
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer; }
@@ -226,8 +240,11 @@ body {
 #delete {
   width: 3.5rem;
   height: 3.5rem;
-  background-image: url(../img/bin.png);
+  background-image: url(../img/bin.svg);
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: 1.5rem;
   cursor: pointer; }
+  @media only screen and (min-width: 46.25em) {
+    #delete {
+      margin-right: 4rem; } }

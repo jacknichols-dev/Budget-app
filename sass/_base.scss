@@ -5,7 +5,8 @@ $pri1: #29003a;
 $sec: #ff6700;
 
 $shade: 0 1rem 3rem rgba(0, 0, 0, 0.3);
-$shade-up: 0 -1rem 2rem rgba(0, 0, 0, 0.4);
+$shade-up-light: 0 -0.7rem 0.7rem rgba(0, 0, 0, 0.15);
+$shade-up-heavy: 0 -1rem 2rem rgba(0, 0, 0, 0.25);
 
 // mixins
 
@@ -43,6 +44,7 @@ body {
   font-family: "Baloo Paaji 2", cursive, sans-serif;
   color: $pri;
   background-color: pri1;
+  line-height: 1.2;
 
   @include respond(phone-large) {
     margin: auto 25%;

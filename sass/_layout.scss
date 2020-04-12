@@ -23,7 +23,6 @@
     padding: 2rem 0;
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
-    line-height: 1.3;
 
     &--value {
       font-size: 4rem;
@@ -65,8 +64,12 @@
   background-color: white;
   border-top-left-radius: 2.7rem;
   border-top-right-radius: 2.7rem;
-  box-shadow: $shade-up;
-  height: 58vh;
+  box-shadow: $shade-up-heavy;
+  height: 70vh;
+
+  @include respond(phone-large) {
+    min-height: 80rem;
+  }
 
   &__title {
     font-weight: 800;
@@ -83,7 +86,7 @@
     justify-content: space-between;
     width: 65%;
     font-weight: 300;
-    padding-left: 2.5rem;
+    padding: 0 0 1.2rem 2.5rem;
     cursor: pointer;
 
     @include respond(phone-large) {
@@ -131,63 +134,7 @@
   -moz-user-select: auto;
   -ms-user-select: auto;
   user-select: auto;
-  box-shadow: $shade-up;
-  height: 8rem;
-
-  @include respond(phone-large) {
-    position: absolute;
-    width: 100%;
-  }
-
-  & > * {
-    height: 4.5rem;
-    color: $pri;
-
-    &:nth-child(1),
-    &:nth-child(2) {
-      margin-left: 0.3rem;
-      font-size: 1.6rem;
-      padding: 0.5rem;
-      border: none;
-      font-weight: 600;
-      outline: none;
-
-      &:nth-child(1) {
-        padding-left: 2.5rem;
-        width: 70%;
-      }
-
-      &:nth-child(2) {
-        width: 30%;
-      }
-
-      &::placeholder {
-        color: $sec;
-        font-weight: 500;
-        letter-spacing: 0.07rem;
-        opacity: 0.8;
-      }
-    }
-  }
-  &--add-btn {
-    margin-right: 2.5rem;
-    cursor: pointer;
-  }
-}
-
-.expense__input {
-  background-color: white;
-  bottom: 0;
-  position: fixed;
-  display: flex;
-  width: 100vw;
-  align-items: center;
-  justify-content: space-between;
-  -webkit-user-select: auto;
-  -moz-user-select: auto;
-  -ms-user-select: auto;
-  user-select: auto;
-  box-shadow: $shade-up;
+  box-shadow: $shade-up-light;
   height: 8rem;
 
   @include respond(phone-large) {
@@ -228,16 +175,84 @@
   &--add-btn {
     margin-right: 2.5rem;
     cursor: pointer;
+    align-self: stretch;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.expense__input {
+  background-color: white;
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  box-shadow: $shade-up-light;
+  height: 8rem;
+
+  @include respond(phone-large) {
+    position: absolute;
+    width: 100%;
+  }
+
+  & > * {
+    height: 4.5rem;
+    color: $pri;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-left: 0.3rem;
+      font-size: 1.6rem;
+      padding: 0.5rem;
+      border: none;
+      font-weight: 600;
+      outline: none;
+
+      &:nth-child(1) {
+        padding-left: 2.5rem;
+        width: 70%;
+      }
+
+      &:nth-child(2) {
+        width: 30%;
+      }
+
+      &::placeholder {
+        color: $sec;
+        font-weight: 500;
+        letter-spacing: 0.07rem;
+        opacity: 0.6;
+      }
+    }
+  }
+  &--add-btn {
+    margin-right: 2.5rem;
+    cursor: pointer;
+    align-self: stretch;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 }
 
 .entry {
-  padding: 1rem 2.5rem;
+  padding: 0.5rem 2.5rem;
   color: $sec;
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: 0.05rem;
   flex: 1;
+
+  @include respond(phone-large) {
+    padding: 1rem 4rem;
+  }
 }
 
 .expense {
@@ -255,7 +270,7 @@
 #edit {
   width: 3rem;
   height: 3rem;
-  background-image: url(../img/edit.png);
+  background-image: url(../img/edit.svg);
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -264,9 +279,13 @@
 #delete {
   width: 3.5rem;
   height: 3.5rem;
-  background-image: url(../img/bin.png);
+  background-image: url(../img/bin.svg);
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: 1.5rem;
   cursor: pointer;
+
+  @include respond(phone-large) {
+    margin-right: 4rem;
+  }
 }
