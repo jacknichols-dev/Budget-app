@@ -16,7 +16,7 @@ html {
       font-size: 70%; } }
 
 body {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 400;
   font-family: "Baloo Paaji 2", cursive, sans-serif;
   color: #530089;
@@ -30,20 +30,24 @@ body {
 .budget-container {
   position: relative;
   background: linear-gradient(to bottom right, #530089, #29003a);
-  max-height: 100vh; }
+  margin: 0 auto; }
   @media only screen and (min-width: 46.25em) {
     .budget-container {
       box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); } }
 
 .top-img {
-  margin-bottom: -1rem; }
+  width: 100%; }
+  @media only screen and (min-width: 46.25em) {
+    .top-img {
+      width: 100%; } }
 
 .header {
   color: white;
-  padding: 0 2.5rem; }
+  padding: 0 2.5rem;
+  height: 29vh; }
   @media only screen and (min-width: 46.25em) {
     .header {
-      padding-left: 4rem; } }
+      padding: 0 4rem; } }
   .header__balance {
     font-weight: 800;
     padding: 2rem 0;
@@ -56,8 +60,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem 2rem 2rem;
-    font-size: 1.6rem; }
+    padding: 4rem 2rem 0 2rem; }
     @media only screen and (min-width: 46.25em) {
       .header__account {
         padding: 0 4rem 1rem 4rem; } }
@@ -78,10 +81,10 @@ body {
   border-top-left-radius: 2.7rem;
   border-top-right-radius: 2.7rem;
   box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.25);
-  height: 70vh; }
+  height: 59vh; }
   @media only screen and (min-width: 46.25em) {
     .budget-dashboard {
-      min-height: 80rem; } }
+      min-height: 50rem; } }
   .budget-dashboard__title {
     font-weight: 800;
     font-size: 2.4rem;
@@ -133,7 +136,8 @@ body {
   @media only screen and (min-width: 46.25em) {
     .income__input {
       position: absolute;
-      width: 100%; } }
+      width: 100%;
+      height: 7rem; } }
   .income__input > * {
     height: 4.5rem;
     color: #530089; }
@@ -179,7 +183,8 @@ body {
   @media only screen and (min-width: 46.25em) {
     .expense__input {
       position: absolute;
-      width: 100%; } }
+      width: 100%;
+      height: 7rem; } }
   .expense__input > * {
     height: 4.5rem;
     color: #530089; }
