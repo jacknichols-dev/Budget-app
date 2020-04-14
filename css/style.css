@@ -24,16 +24,17 @@ body {
   line-height: 1.2; }
   @media only screen and (min-width: 46.25em) {
     body {
-      margin: auto 25%;
       background: #ff6700; } }
 
 .budget-container {
   position: relative;
   background: linear-gradient(to bottom right, #530089, #29003a);
-  margin: 0 auto; }
+  height: 100vh; }
   @media only screen and (min-width: 46.25em) {
     .budget-container {
-      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); } }
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+      width: 45rem;
+      margin: auto; } }
 
 .top-img {
   width: 100%; }
@@ -47,7 +48,8 @@ body {
   height: 29vh; }
   @media only screen and (min-width: 46.25em) {
     .header {
-      padding: 0 4rem; } }
+      padding: 0 4rem;
+      height: auto; } }
   .header__balance {
     font-weight: 800;
     padding: 2rem 0;
@@ -81,17 +83,18 @@ body {
   border-top-left-radius: 2.7rem;
   border-top-right-radius: 2.7rem;
   box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.25);
-  height: 50vh; }
+  height: 59vh; }
   @media only screen and (min-width: 46.25em) {
     .budget-dashboard {
       min-height: 50rem; } }
   .budget-dashboard__title {
     font-weight: 800;
-    font-size: 2.4rem;
-    padding: 2rem 0 1rem 2.5rem; }
+    font-size: 2.8rem;
+    padding: 3rem 0 2rem 2.5rem; }
     @media only screen and (min-width: 46.25em) {
       .budget-dashboard__title {
-        padding-left: 4rem; } }
+        padding-left: 4rem;
+        font-size: 3.5rem; } }
   .budget-dashboard__toggle {
     display: flex;
     justify-content: space-between;
@@ -222,6 +225,10 @@ body {
   @media only screen and (min-width: 46.25em) {
     .entry {
       padding: 1rem 4rem; } }
+
+ul.list {
+  height: 28rem;
+  overflow-x: auto; }
 
 .budget-dashboard #all ul.list li #edit {
   visibility: hidden; }

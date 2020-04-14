@@ -47,7 +47,6 @@ body {
   line-height: 1.2;
 
   @include respond(phone-large) {
-    margin: auto 25%;
     background: $sec;
   }
 }

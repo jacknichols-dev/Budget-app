@@ -127,9 +127,9 @@ function updateUI() {
   let sign = income >= outcome ? "£" : "-£";
 
   //UPDATE UI
-  balanceEl.innerHTML = `<small>${sign}</small>${balance}`;
-  outcomeTotalEl.innerHTML = `<small>£</small>${outcome}`;
-  incomeTotalEl.innerHTML = `<small>£</small>${income}`;
+  balanceEl.innerHTML = `<small>${sign}</small><strong> ${balance}</strong>`;
+  outcomeTotalEl.innerHTML = `<small>£</small><strong> ${outcome}</strong>`;
+  incomeTotalEl.innerHTML = `<small>£</small><strong> ${income}</strong>`;
 
   clearElement([expenseList, incomeList, allList]);
 

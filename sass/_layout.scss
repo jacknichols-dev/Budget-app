@@ -1,10 +1,12 @@
 .budget-container {
   position: relative;
   background: linear-gradient(to bottom right, $pri, $pri1);
-  margin: 0 auto;
+  height: 100vh;
 
   @include respond(phone-large) {
     box-shadow: $shade;
+    width: 45rem;
+    margin: auto;
   }
 }
 .top-img {
@@ -21,6 +23,7 @@
 
   @include respond(phone-large) {
     padding: 0 4rem;
+    height: auto;
   }
 
   &__balance {
@@ -69,7 +72,7 @@
   border-top-left-radius: 2.7rem;
   border-top-right-radius: 2.7rem;
   box-shadow: $shade-up-heavy;
-  height: 50vh;
+  height: 59vh;
 
   @include respond(phone-large) {
     min-height: 50rem;
@@ -77,11 +80,12 @@
 
   &__title {
     font-weight: 800;
-    font-size: 2.4rem;
-    padding: 2rem 0 1rem 2.5rem;
+    font-size: 2.8rem;
+    padding: 3rem 0 2rem 2.5rem;
 
     @include respond(phone-large) {
       padding-left: 4rem;
+      font-size: 3.5rem;
     }
   }
 
@@ -258,6 +262,11 @@
   @include respond(phone-large) {
     padding: 1rem 4rem;
   }
+}
+
+ul.list {
+  height: 28rem;
+  overflow-x: auto;
 }
 
 .budget-dashboard #all ul.list li #edit {
