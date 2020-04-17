@@ -44,7 +44,7 @@ body {
   font-family: "Baloo Paaji 2", cursive, sans-serif;
   color: $pri;
   background-color: pri1;
-  line-height: 1.2;
+  line-height: 1.3;
 
   @include respond(phone-large) {
     background: $sec;

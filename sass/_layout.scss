@@ -1,12 +1,14 @@
 .budget-container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: linear-gradient(to bottom right, $pri, $pri1);
   height: 100vh;
 
   @include respond(phone-large) {
     box-shadow: $shade;
     width: 45rem;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 .top-img {
@@ -17,13 +19,14 @@
   }
 }
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   color: white;
   padding: 0 2.5rem;
-  height: 29vh;
 
   @include respond(phone-large) {
     padding: 0 4rem;
-    height: auto;
   }
 
   &__balance {
