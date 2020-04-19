@@ -16,6 +16,10 @@ html {
       font-size: 70%; } }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
   font-size: 1.8rem;
   font-weight: 400;
   font-family: "Baloo Paaji 2", cursive, sans-serif;
@@ -31,25 +35,25 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background: linear-gradient(to bottom right, #530089, #29003a);
-  height: 100vh; }
+  height: 100vh;
+  width: 100vw; }
   @media only screen and (min-width: 46.25em) {
     .budget-container {
       box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
-      width: 45rem;
+      width: 40rem;
+      height: 80rem;
       margin: 0 auto; } }
 
 .top-img {
-  width: 100%; }
-  @media only screen and (min-width: 46.25em) {
-    .top-img {
-      width: 100%; } }
+  min-width: 100%; }
 
 .header {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   color: white;
-  padding: 0 2.5rem; }
+  padding: 0 2.5rem;
+  height: 30rem; }
   @media only screen and (min-width: 46.25em) {
     .header {
       padding: 0 4rem; } }
@@ -86,10 +90,7 @@ body {
   border-top-left-radius: 2.7rem;
   border-top-right-radius: 2.7rem;
   box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.25);
-  height: 59vh; }
-  @media only screen and (min-width: 46.25em) {
-    .budget-dashboard {
-      min-height: 50rem; } }
+  height: 40rem; }
   .budget-dashboard__title {
     font-weight: 800;
     font-size: 2.8rem;
@@ -227,10 +228,10 @@ body {
   flex: 1; }
   @media only screen and (min-width: 46.25em) {
     .entry {
-      padding: 1rem 4rem; } }
+      padding: 0.7rem 4rem; } }
 
 ul.list {
-  height: 28rem;
+  height: 19rem;
   overflow-x: auto; }
 
 .budget-dashboard #all ul.list li #edit {

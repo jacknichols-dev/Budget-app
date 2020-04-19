@@ -4,19 +4,17 @@
   justify-content: space-between;
   background: linear-gradient(to bottom right, $pri, $pri1);
   height: 100vh;
+  width: 100vw;
 
   @include respond(phone-large) {
     box-shadow: $shade;
-    width: 45rem;
+    width: 40rem;
+    height: 80rem;
     margin: 0 auto;
   }
 }
 .top-img {
-  width: 100%;
-
-  @include respond(phone-large) {
-    width: 100%;
-  }
+  min-width: 100%;
 }
 .header {
   display: flex;
@@ -24,6 +22,7 @@
   justify-content: space-around;
   color: white;
   padding: 0 2.5rem;
+  height: 30rem;
 
   @include respond(phone-large) {
     padding: 0 4rem;
@@ -75,11 +74,7 @@
   border-top-left-radius: 2.7rem;
   border-top-right-radius: 2.7rem;
   box-shadow: $shade-up-heavy;
-  height: 59vh;
-
-  @include respond(phone-large) {
-    min-height: 50rem;
-  }
+  height: 40rem;
 
   &__title {
     font-weight: 800;
@@ -263,12 +258,12 @@
   flex: 1;
 
   @include respond(phone-large) {
-    padding: 1rem 4rem;
+    padding: 0.7rem 4rem;
   }
 }
 
 ul.list {
-  height: 28rem;
+  height: 19rem;
   overflow-x: auto;
 }
 

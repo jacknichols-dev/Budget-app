@@ -39,6 +39,10 @@ html {
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
   font-size: 1.8rem;
   font-weight: 400;
   font-family: "Baloo Paaji 2", cursive, sans-serif;
